@@ -14,5 +14,10 @@ defmodule JournalExApiWeb.Router do
     post "/users/sign_up", UserController, :sign_up
     post "/users/sign_in", UserController, :sign_in
   end
+
+  scope "/api", JournalExApiWeb do
+    pipe_through [:api, :auth]
+    get "/authors/:id", AuthorController, :show
+    put "/authors", AuthorController, :update
   end
 end
