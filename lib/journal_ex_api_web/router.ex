@@ -19,5 +19,6 @@ defmodule JournalExApiWeb.Router do
     pipe_through [:api, :auth]
     get "/authors/:id", AuthorController, :show
     put "/authors", AuthorController, :update
+    resources "/articles", ArticleController, only: [:index, :create, :delete]
   end
 end
