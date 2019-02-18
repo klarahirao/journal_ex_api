@@ -9,16 +9,16 @@ Setup:
   
 Endpoints:
 
-* POST    /api/users/sign_up  
-* POST    /api/users/sign_in  
+* POST    /api/users/sign_up (`username`, `first_name`, `last_name`, `age`, `password`)
+* POST    /api/users/sign_in (`username`, `password`)
 * GET     /api/authors/:id    
-* PUT     /api/authors  
-* GET     /api/articles       
-* POST    /api/articles  
+* PUT     /api/authors (`author` -> (`first_name`, `last_name`, `age`))
+* GET     /api/articles?page=&page_size=    
+* POST    /api/articles (`article` -> (`title`, `description`, `body`))
 * DELETE  /api/articles/:id 
 
 Authentication:
-  * Use `POST /api/users/sign_up` to create new account (`username`, `first_name`, `last_name`, `age`, `password`)
+  * Use `POST /api/users/sign_up` to create new account
 
   * Use returned token in the authorisation header like so:
 
