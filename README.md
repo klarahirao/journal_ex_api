@@ -1,4 +1,4 @@
-# JournalExApi
+# JournalExApi (recruitment task)
 
 Setup:
 
